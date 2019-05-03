@@ -14,7 +14,32 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="infoLabel">
+        <property name="text">
+         <string>Info:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="positionLabel">
+        <property name="text">
+         <string>Position:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="osLabel">
+        <property name="text">
+         <string>Os:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
     <item>
      <layout class="QHBoxLayout" name="HorLayout1">
       <item>

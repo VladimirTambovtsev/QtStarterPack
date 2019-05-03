@@ -34,8 +34,11 @@ void MainWindow::on_pushButton_clicked()
         QString os = dialog->getFavoriteOs();
 
         qDebug() << "Dialog accepted; position: " << position;
-
         qDebug() << "Dialog accepted; os: " << os;
+
+
+        ui->positionLabel->setText("Position: " + position);
+        ui->osLabel->setText("OS: " + os);
     }
 
     if (ret == QDialog::Rejected)

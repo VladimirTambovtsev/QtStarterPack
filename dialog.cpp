@@ -1,6 +1,5 @@
 #include "dialog.h"
 #include "ui_dialog.h"
-#include <QDebug>
 
 
 Dialog::Dialog(QWidget *parent) :
@@ -23,7 +22,6 @@ void Dialog::on_submitDialogButton_clicked()
  if(!userPosition.isEmpty()) {
      position = userPosition;
 
-     qDebug() << "position: " << position;
 
      if(ui->windowsRadioButton->isChecked()) {
          favoriteOs = 'w';
