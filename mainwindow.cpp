@@ -28,11 +28,18 @@ void MainWindow::on_pushButton_clicked()
     Dialog * dialog = new Dialog(this);
     int ret = dialog->exec();
 
-    if (ret == QDialog::Accepted) {
-        qDebug() << "Dialog accepted";
+    if (ret == QDialog::Accepted)
+    {
+        QString position = dialog->getPosition();
+        QString os = dialog->getFavoriteOs();
+
+        qDebug() << "Dialog accepted; position: " << position;
+
+        qDebug() << "Dialog accepted; os: " << os;
     }
 
-    if (ret == QDialog::Rejected) {
+    if (ret == QDialog::Rejected)
+    {
         qDebug() << "Dialog rejected";
     }
 

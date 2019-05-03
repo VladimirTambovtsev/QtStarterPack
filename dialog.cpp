@@ -1,5 +1,7 @@
 #include "dialog.h"
 #include "ui_dialog.h"
+#include <QDebug>
+
 
 Dialog::Dialog(QWidget *parent) :
     QDialog(parent),
@@ -21,14 +23,16 @@ void Dialog::on_submitDialogButton_clicked()
  if(!userPosition.isEmpty()) {
      position = userPosition;
 
+     qDebug() << "position: " << position;
+
      if(ui->windowsRadioButton->isChecked()) {
-         favoriteOs = 'Windows';
+         favoriteOs = 'w';
      }
      if(ui->macRadioButton->isChecked()) {
-         favoriteOs = 'MacOS';
+         favoriteOs = 'm';
      }
      if(ui->linuxRadioButton->isChecked()) {
-         favoriteOs = 'Linux';
+         favoriteOs = 'l';
      }
  }
 
@@ -39,4 +43,14 @@ void Dialog::on_submitDialogButton_clicked()
 void Dialog::on_cancelDialogButton_clicked()
 {
     reject();
+}
+
+QString Dialog::getPosition() const
+{
+    return position;
+}
+
+QString Dialog::getFavoriteOs() const
+{
+    return favoriteOs;
 }

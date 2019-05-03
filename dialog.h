@@ -15,6 +15,10 @@ public:
     explicit Dialog(QWidget *parent = nullptr);
     ~Dialog();
 
+    QString getFavoriteOs() const;
+
+    QString getPosition() const;
+
 private slots:
     void on_submitDialogButton_clicked();
 
