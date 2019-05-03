@@ -34,7 +34,7 @@
       <item>
        <widget class="QLabel" name="osLabel">
         <property name="text">
-         <string>Os:</string>
+         <string>OS:</string>
         </property>
        </widget>
       </item>
@@ -95,6 +95,13 @@
          </size>
         </property>
        </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>Styles</string>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="pushButton">

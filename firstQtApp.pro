@@ -27,15 +27,18 @@ CONFIG += c++11
 SOURCES += \
         dialog.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        styledialog.cpp
 
 HEADERS += \
         dialog.h \
-        mainwindow.h
+        mainwindow.h \
+        styledialog.h
 
 FORMS += \
         dialog.ui \
-        mainwindow.ui
+        mainwindow.ui \
+        styledialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

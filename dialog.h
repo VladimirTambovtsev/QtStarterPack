@@ -24,6 +24,8 @@ private slots:
 
     void on_cancelDialogButton_clicked();
 
+    void on_positionLineEdit_editingFinished();
+
 private:
     Ui::Dialog *ui;
     QString position;

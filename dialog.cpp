@@ -7,6 +7,7 @@ Dialog::Dialog(QWidget *parent) :
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
+
 }
 
 Dialog::~Dialog()
@@ -21,7 +22,6 @@ void Dialog::on_submitDialogButton_clicked()
  QString userPosition = ui->positionLineEdit->text();
  if(!userPosition.isEmpty()) {
      position = userPosition;
-
 
      if(ui->windowsRadioButton->isChecked()) {
          favoriteOs = 'w';
@@ -51,4 +51,9 @@ QString Dialog::getPosition() const
 QString Dialog::getFavoriteOs() const
 {
     return favoriteOs;
+}
+
+void Dialog::on_positionLineEdit_editingFinished()
+{
+
 }

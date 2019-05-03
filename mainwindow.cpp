@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "dialog.h"
+#include "styledialog.h"
 #include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -18,11 +19,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     qDebug() << "Submitting data..";
-    qDebug() << "First Name is " << ui->firstNameLineEdit->text();
-    qDebug() << "Last Name is " << ui->lastNameLineEdit->text();
-    qDebug() << "Message is " << ui->messageLineEdit->text();
 
-    ui->pushButton->setText("Loading..");
 
     // open new dialog
     Dialog * dialog = new Dialog(this);
@@ -39,6 +36,9 @@ void MainWindow::on_pushButton_clicked()
 
         ui->positionLabel->setText("Position: " + position);
         ui->osLabel->setText("OS: " + os);
+
+        ui->pushButton->setText("Change");
+
     }
 
     if (ret == QDialog::Rejected)
@@ -46,4 +46,20 @@ void MainWindow::on_pushButton_clicked()
         qDebug() << "Dialog rejected";
     }
 
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    StyleDialog * styleDialog = new StyleDialog(this);
+
+    // lambda style
+    connect(styleDialog, &StyleDialog::accepted,[=](){
+        qDebug() << "StyleDialog Accepted";
+    });
+
+    connect(styleDialog, &StyleDialog::rejected,[=](){
+        qDebug() << "StyleDialog Rejected";
+    });
+
+    styleDialog->exec();
 }
