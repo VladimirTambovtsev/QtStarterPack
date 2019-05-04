@@ -12,3 +12,8 @@ StyleDialog::~StyleDialog()
 {
     delete ui;
 }
+
+void StyleDialog::on_buttonBox_rejected()
+{
+    reject();
+}
