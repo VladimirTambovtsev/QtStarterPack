@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->positionLabel->setAutoFillBackground(true);
+
 }
 
 MainWindow::~MainWindow()
@@ -54,7 +56,22 @@ void MainWindow::on_pushButton_2_clicked()
 
     // lambda style
     connect(styleDialog, &StyleDialog::accepted,[=](){
-        qDebug() << "StyleDialog Accepted";
+
+        // set font from styledialog
+        QFont font = styleDialog->getFont();
+        ui->positionLabel->setFont(font);
+        ui->osLabel->setFont(font);
+        ui->pushButton->setFont(font);
+        ui->pushButton_2->setFont(font);
+
+        // @TODO: set textColor from styledialog
+//        QColor textColor = styleDialog->getTextColor();
+//        qDebug() << "textColor" << textColor;
+
+
+        // @TODO: set background color from styledialog
+
+
     });
 
     connect(styleDialog, &StyleDialog::rejected,[=](){

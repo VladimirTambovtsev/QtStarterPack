@@ -51,6 +51,7 @@ void StyleDialog::on_backgroundButton_clicked()
         palette.setColor(QPalette::Window, chosenColor);
         ui->label->setPalette(palette);
 
+
         qDebug() << "chosen color is valid";
     } else {
         qDebug() << "chosen color is unvalid";
@@ -69,4 +70,30 @@ void StyleDialog::on_fontButton_clicked()
         qDebug() << "Error setting font";
     }
 
+}
+
+void StyleDialog::on_buttonBox_accepted()
+{
+
+    // get font from text label
+    QFont labelFont = ui->label->property("font").value<QFont>();
+    qDebug() << labelFont.family() << labelFont.pointSize();
+    font = labelFont;
+
+    // get color from text label
+    QColor labelColorText = ui->label->palette().color(QPalette::Window);
+    qDebug() << "color text" << labelColorText;
+    textColor = labelColorText;
+
+    accept();
+}
+
+QColor StyleDialog::getTextColor() const
+{
+    return textColor;
+}
+
+QFont StyleDialog::getFont() const
+{
+    return font;
 }

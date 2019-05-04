@@ -15,6 +15,10 @@ public:
     explicit StyleDialog(QWidget *parent = nullptr);
     ~StyleDialog();
 
+    QFont getFont() const;
+
+    QColor getTextColor() const;
+
 private slots:
     void on_buttonBox_rejected();
 
@@ -24,8 +28,13 @@ private slots:
 
     void on_fontButton_clicked();
 
+    void on_buttonBox_accepted();
+
 private:
     Ui::StyleDialog *ui;
+    QFont font;
+    QColor textColor;
+    QString backgroundColor;
 };
 
 #endif // STYLEDIALOG_H
