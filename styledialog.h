@@ -20,6 +20,10 @@ private slots:
 
     void on_textColorButton_clicked();
 
+    void on_backgroundButton_clicked();
+
+    void on_fontButton_clicked();
+
 private:
     Ui::StyleDialog *ui;
 };

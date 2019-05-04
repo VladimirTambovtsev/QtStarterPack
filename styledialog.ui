@@ -24,14 +24,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="backgroundButton">
        <property name="text">
         <string>Background</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="fontButton">
        <property name="text">
         <string>Font</string>
        </property>
