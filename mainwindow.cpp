@@ -75,6 +75,10 @@ void MainWindow::on_pushButton_2_clicked()
         ui->positionLabel->setPalette(textColor);
         ui->osLabel->setPalette(textColor);
 
+        // set stylesheets for buttons
+        ui->pushButton->setStyleSheet("QPushButton{background-color: #000; color: grey; border-radius: 5px; padding: 5px 10px}");
+        ui->pushButton_2->setStyleSheet("QPushButton{background-color: brown; color: grey; border-radius: 5px; padding: 5px 10px}");
+
 
     });
 
