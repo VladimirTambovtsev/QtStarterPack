@@ -18,6 +18,8 @@ public:
 private slots:
     void on_buttonBox_rejected();
 
+    void on_textColorButton_clicked();
+
 private:
     Ui::StyleDialog *ui;
 };
