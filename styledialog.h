@@ -15,6 +15,19 @@ public:
     explicit StyleDialog(QWidget *parent = nullptr);
     ~StyleDialog();
 
+private slots:
+    void on_buttonBox_rejected();
+
+    void on_buttonBox_accepted();
+
+    void on_pushButton_3_clicked();
+
+    void on_backgroundButton_clicked();
+
+    void on_textButton_clicked();
+
+    void on_fontButton_clicked();
+
 private:
     Ui::StyleDialog *ui;
 };
