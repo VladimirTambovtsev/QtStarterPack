@@ -81,14 +81,15 @@ void StyleDialog::on_buttonBox_accepted()
     font = labelFont;
 
     // get color from text label
-    QColor labelColorText = ui->label->palette().color(QPalette::Window);
+    /*QPalette labelColorText = ui->label->palette().color(QPalette::Window)*/
+    QPalette labelColorText = ui->label->palette();
     qDebug() << "color text" << labelColorText;
     textColor = labelColorText;
 
     accept();
 }
 
-QColor StyleDialog::getTextColor() const
+QPalette StyleDialog::getTextColor() const
 {
     return textColor;
 }

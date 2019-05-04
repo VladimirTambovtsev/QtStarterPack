@@ -17,7 +17,7 @@ public:
 
     QFont getFont() const;
 
-    QColor getTextColor() const;
+    QPalette getTextColor() const;
 
 private slots:
     void on_buttonBox_rejected();
@@ -33,7 +33,7 @@ private slots:
 private:
     Ui::StyleDialog *ui;
     QFont font;
-    QColor textColor;
+    QPalette textColor;
     QString backgroundColor;
 };
 

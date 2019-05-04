@@ -64,12 +64,16 @@ void MainWindow::on_pushButton_2_clicked()
         ui->pushButton->setFont(font);
         ui->pushButton_2->setFont(font);
 
-        // @TODO: set textColor from styledialog
-//        QColor textColor = styleDialog->getTextColor();
-//        qDebug() << "textColor" << textColor;
+        // set textColor & background color from styledialog
+        QPalette textColor = styleDialog->getTextColor();
 
+        // set autofill for background color
+        ui->positionLabel->setAutoFillBackground(true);
+        ui->osLabel->setAutoFillBackground(true);
 
-        // @TODO: set background color from styledialog
+        // set and apply color & background to labels
+        ui->positionLabel->setPalette(textColor);
+        ui->osLabel->setPalette(textColor);
 
 
     });
