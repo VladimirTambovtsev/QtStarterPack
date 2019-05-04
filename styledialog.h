@@ -15,6 +15,9 @@ public:
     explicit StyleDialog(QWidget *parent = nullptr);
     ~StyleDialog();
 
+private slots:
+    void on_buttonBox_rejected();
+
 private:
     Ui::StyleDialog *ui;
 };
