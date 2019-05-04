@@ -19,6 +19,7 @@ void StyleDialog::on_buttonBox_rejected()
 {
     reject();
 }
+<<<<<<< HEAD
 
 void StyleDialog::on_textColorButton_clicked()
 {
@@ -36,3 +37,5 @@ void StyleDialog::on_textColorButton_clicked()
     }
 }
 
+=======
+>>>>>>> d209007ad01667ba492a82f4f9fba527737ab340

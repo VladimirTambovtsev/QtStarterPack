@@ -18,6 +18,7 @@ public:
 private slots:
     void on_buttonBox_rejected();
 
+<<<<<<< HEAD
     void on_buttonBox_accepted();
 
     void on_pushButton_3_clicked();
@@ -28,6 +29,8 @@ private slots:
 
     void on_fontButton_clicked();
 
+=======
+>>>>>>> d209007ad01667ba492a82f4f9fba527737ab340
 private:
     Ui::StyleDialog *ui;
 };

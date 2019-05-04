@@ -17,39 +17,23 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-<<<<<<< HEAD
-      <widget class="QPushButton" name="textButton">
-       <property name="text">
-        <string>Text</string>
-=======
       <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>Font</string>
->>>>>>> d209007ad01667ba492a82f4f9fba527737ab340
+        <string>Text Color</string>
        </property>
       </widget>
      </item>
      <item>
-<<<<<<< HEAD
-      <widget class="QPushButton" name="backgroundButton">
-=======
       <widget class="QPushButton" name="pushButton_3">
->>>>>>> d209007ad01667ba492a82f4f9fba527737ab340
        <property name="text">
         <string>Background</string>
        </property>
       </widget>
      </item>
      <item>
-<<<<<<< HEAD
-      <widget class="QPushButton" name="fontButton">
-       <property name="text">
-        <string>Font</string>
-=======
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>Text Color</string>
->>>>>>> d209007ad01667ba492a82f4f9fba527737ab340
+        <string>Font</string>
        </property>
       </widget>
      </item>
@@ -58,11 +42,6 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-<<<<<<< HEAD
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>I'm the text example </string>
-=======
       <spacer name="horizontalSpacer">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -78,17 +57,12 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Text example</string>
->>>>>>> d209007ad01667ba492a82f4f9fba527737ab340
+        <string>I'm the text example</string>
        </property>
       </widget>
      </item>
      <item>
-<<<<<<< HEAD
-      <spacer name="horizontalSpacer">
-=======
       <spacer name="horizontalSpacer_2">
->>>>>>> d209007ad01667ba492a82f4f9fba527737ab340
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
