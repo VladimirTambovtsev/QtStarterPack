@@ -1,8 +1,6 @@
 #include "styledialog.h"
 #include "ui_styledialog.h"
 #include <QColorDialog>
-#include <QDebug>
-
 
 StyleDialog::StyleDialog(QWidget *parent) :
     QDialog(parent),
@@ -22,22 +20,19 @@ void StyleDialog::on_buttonBox_rejected()
     reject();
 }
 
-void StyleDialog::on_buttonBox_accepted()
-{
-    qDebug() << "StyleDialog accepted";
-}
-
-void StyleDialog::on_textButton_clicked()
+void StyleDialog::on_textColorButton_clicked()
 {
     QPalette palette = ui->label->palette();
+
+    QColor color = palette.color(QPalette::WindowText);
+    QColor chosenColor = QColorDialog::getColor(color, this, "Choose text color");
+
+    if(chosenColor.isValid()) {
+        qDebug() << "User choose a valid color";
+    } else {
+
+        qDebug() << "User choose a valid color";
+
+    }
 }
 
-void StyleDialog::on_backgroundButton_clicked()
-{
-
-}
-
-void StyleDialog::on_fontButton_clicked()
-{
-
-}
