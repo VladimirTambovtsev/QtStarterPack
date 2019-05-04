@@ -29,6 +29,9 @@ void StyleDialog::on_textColorButton_clicked()
     QColor chosenColor = QColorDialog::getColor(color, this, "Choose text color");
 
     if(chosenColor.isValid()) {
+        palette.setColor(QPalette::WindowText, chosenColor);
+        ui->label->setPalette(palette);
+
         qDebug() << "chosen color is valid";
     } else {
         qDebug() << "chosen color is unvalid";
